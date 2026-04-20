@@ -6,6 +6,7 @@ import Tools from "./components/Tools";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       <Portfolio />
       <Footer />
       <ScrollToTop />
+
+      {/* taruh di paling bawah */}
+      <Analytics />
     </div>
   );
 }
