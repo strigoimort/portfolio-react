@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  /* --color-primary: #5A4FC0; */
+  --color-primary: #3119E1;
+  --color-primary-light: #7C73D6;
+  --color-primary-dark: #3E35A3;
+
+  --color-secondary: #1e293b;
+  --color-dark: #0f172a;
+}
+
+
+/* SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ANIMATION */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@layer utilities {
+  .animate-left {
+    animation: slideInLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .animate-left-delay-1 {
+    animation: slideInLeft 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .animate-left-delay-2 {
+    animation: slideInLeft 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .animate-left-delay-3 {
+    animation: slideInLeft 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .animate-right {
+    animation: slideInRight 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
